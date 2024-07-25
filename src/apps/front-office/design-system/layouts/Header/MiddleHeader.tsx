@@ -50,7 +50,7 @@ const MiddleHeader = () => {
           className="w-[150px] sm:min-w-[180px] h-[45px] sm:h-[55px]"
         />
       </div>
-      <div className="hidden lg:flex items-center border border-main-500 rounded-lg p-2">
+      <div className="hidden lg:flex  items-center border border-main-500 rounded-lg p-2">
         <Select>
           <SelectTrigger className="hidden xl:block xl:w-[180px] font-bold border-none shadow-none focus:ring-0">
             <SelectValue placeholder={MiddleHeaderSelectPlacholder} />
@@ -70,7 +70,7 @@ const MiddleHeader = () => {
           <Input
             type="text"
             placeholder={MiddleHeaderInputPlacholder}
-            className="2xl:w-[600px] w-[400px] text-lg placeholder:text-slate-500 border-none shadow-none focus-visible:ring-0"
+            className="3xl:w-[600px] w-[400px] text-lg placeholder:text-slate-500 border-none shadow-none focus-visible:ring-0"
           />
           <div className="absolute right-4 text-2xl text-slate-500">
             <i className="bx bx-search"></i>

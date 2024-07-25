@@ -19,6 +19,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        customGreen: "#3BB77E",
         main: {
           200: "#DEF9EC",
           500: "#3BB77E",
@@ -65,6 +66,10 @@ module.exports = {
         },
       },
       borderRadius: {
+        none: "0",
+        DEFAULT: "0.25rem",
+        full: "9999px",
+        large: "12px",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",

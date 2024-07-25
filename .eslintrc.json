@@ -35,5 +35,14 @@
     ],
     "react/react-in-jsx-scope": "off",
     "unused-imports/no-unused-imports": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/components/ui/*.tsx"],
+      "rules": {
+        "react/prop-types": [2, { "ignore": ["className"] }],
+        "react-refresh/only-export-components": "off"
+      }
+    }
+  ]
 }

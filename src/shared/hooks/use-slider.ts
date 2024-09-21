@@ -1,10 +1,9 @@
 import { useOnce } from "@mongez/react-hooks";
 import { useState } from "react";
 import { getHome } from "src/apps/front-office/home/services/home-service";
-import { Banner } from "src/apps/front-office/utils/types";
 
 export const useSlider = () => {
-  const [sliderData, setSliderData] = useState<Banner[]>([]);
+  const [sliderData, setSliderData] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line unused-imports/no-unused-vars
   const [error, setError] = useState<string | null>(null);

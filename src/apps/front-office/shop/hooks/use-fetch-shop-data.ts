@@ -1,70 +1,28 @@
+import { queryString } from "@mongez/react-router";
 import { Product } from "apps/front-office/shop/utils/types";
 import { useEffect, useState } from "react";
-import { shopDataAtom } from "../atoms/shop-data.atom";
-import { getShopPageData } from "../services/shop-service";
+import { getProducts } from "../../home/services/home-service";
 
-export type ShopData = {
-  products: Product[];
-  filters: {
-    type: string;
-    label: string;
-    data: [];
-  }[];
-  sortOptions: {
-    text: string;
-    value: string;
-  }[];
-  breadcrumbs: {
-    text: string;
-    url: string;
-  }[];
-  paginationInfo: {
-    limit: number;
-    page: number;
-    pages: number;
-    result: number;
-    total: number;
-  };
-};
-
-const useFetchShopData = () => {
-  const [data, setData] = useState<ShopData>({
-    products: [],
-    filters: [],
-    sortOptions: [],
-    breadcrumbs: [],
-    paginationInfo: {
-      limit: 0,
-      page: 0,
-      pages: 0,
-      result: 0,
-      total: 0,
-    },
-  });
-
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const fetch = async query => {
-    setLoading(true);
-
-    getShopPageData(query)
+export default function useFetchShopData(currentPage: number) {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [pagination, setPagination] = useState<any>({});
+  const [loading, setIsLoading] = useState(true);
+  const [error, setError] = useState<any>(null);
+  useEffect(() => {
+    setIsLoading(true);
+    getProducts({
+      page: currentPage,
+      limit: 20,
+      ...queryString.all(),
+    })
       .then(response => {
-        shopDataAtom.update(response.data);
-        setData(response.data);
-        setLoading(false);
+        setProducts(response.data.products);
+        setPagination(response.data.paginationInfo);
+        setIsLoading(false);
       })
       .catch(error => {
         setError(error);
-        setLoading(false);
       });
-  };
-
-  useEffect(() => {
-    fetch("");
-  }, []);
-
-  return { data, loading, error, fetch };
-};
-
-export default useFetchShopData;
+  }, [currentPage]);
+  return { loading, error, products, pagination };
+}

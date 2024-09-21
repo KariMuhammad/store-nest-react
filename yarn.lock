@@ -538,6 +538,7 @@
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@mongez/react-form/-/react-form-3.0.11.tgz#d00349c56cda3e29e902838cb4b6de4e5c93d74b"
   integrity sha512-5zjNrxnOLdVmQSX9uPw1H8sTdKUTtc5jjDAVRsb+ZWfVhcGpuCKVT1ebhVQR9f7Xqu274qk+GjQUtSFOyw6jDw==
+
   dependencies:
     "@mongez/events" "2.1.0"
     "@mongez/localization" "^3.0.0"

@@ -2,5 +2,29 @@
   "shop": {
     "en": "Shop",
     "ar": "متجر"
+  },
+  "found": {
+    "en": "We found",
+    "ar": "تم العثور على"
+  },
+  "itemsForYou": {
+    "en": " for you!",
+    "ar": "العناصر لك!"
+  },
+  "applyFilter": {
+    "en": "Apply Filter",
+    "ar": "تطبيق الفلتر"
+  },
+  "fillByPrice": {
+    "en": "Fill by price",
+    "ar": "ترتيب حسب السعر"
+  },
+  "from": {
+    "en": "From",
+    "ar": "من"
+  },
+  "to": {
+    "en": "To",
+    "ar": "إلي"
   }
 }

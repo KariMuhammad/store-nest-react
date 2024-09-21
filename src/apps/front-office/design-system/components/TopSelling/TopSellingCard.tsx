@@ -1,26 +1,31 @@
 import { Star, StarHalf } from "lucide-react";
-import { topSellingType } from "./index";
+
+export type topSellingCardType = {
+  productImageTop?: string;
+  productName?: string;
+  productTitle?: string;
+  salePrice?: number;
+  priceOld?: number;
+};
+
 export default function TopSellingCard({
   productImageTop,
-  productDescription,
+  productName,
   salePrice,
   priceOld,
-}: topSellingType) {
+}: topSellingCardType) {
   return (
-    <div
-      className="flex items-center gap-5 mb-7 cursor-pointer relative
-      group hover:-translate-y-2 duration-700
-       small-to-medium:block small-to-medium:m-auto">
-      <div>
+    <div className="flex items-center gap-5 mb-7 cursor-pointer relative group hover:-translate-y-2 duration-700 small-to-medium:block small-to-medium:m-auto">
+      <div className="w-[100px] h-[100px]">
         <img
-          className="rounded-xl w-32	small-to-medium:w-11/12	"
+          className="w-full h-full rounded-xl"
           src={productImageTop}
           alt="not Found"
         />
       </div>
       <div>
         <h6 className="font-[700] text-sm text-[#253D4E] leading-5 group-hover:text-[#3BB77E] duration-500">
-          {productDescription}
+          {productName}
         </h6>
         <div className="hidden xl:flex gap-1">
           <ul className="flex items-center">

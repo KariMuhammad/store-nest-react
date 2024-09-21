@@ -1,7 +1,6 @@
 "use client";
 
-import CategorySidebar from "src/apps/front-office/shop/components/CategorySidebar";
-import TrendingProducts from "src/apps/front-office/shop/pages/components/TrendingProducts";
+import CategorySidebar from "src/apps/front-office/shop/pages/ShopPage/components/CategorySidebar";
 import SearchInput from "../../components/SearchInput";
 import Content from "./Content";
 
@@ -15,9 +14,7 @@ export default function PrivacyPage() {
         <div className="flex flex-col !w-[311px]">
           <SearchInput />
           <CategorySidebar />
-          <div className="sticky">
-            <TrendingProducts />
-          </div>
+          <div className="sticky">{/* <TrendingProducts /> */}</div>
           {/* <image src={productImg12} width={500} alt='product'/> */}
         </div>
       </div>

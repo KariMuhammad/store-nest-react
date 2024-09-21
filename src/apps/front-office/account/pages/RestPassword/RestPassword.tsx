@@ -11,8 +11,8 @@ import URLS from "src/apps/front-office/utils/urls";
 export default function RestPassword() {
   return (
     <section className="w-full text-secondary">
-      <Helmet title={trans("about-us.title")} />
-      <div className="breadcrump relative">
+      <Helmet title={trans("reset-password.title")} />
+      <div className="breadcrumb relative">
         <div className="absolute w-full border-b-2 border-b-gray-200 top-full"></div>
         <div className="nav-links w-full">
           <Breadcrumb

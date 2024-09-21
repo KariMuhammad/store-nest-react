@@ -23,11 +23,11 @@ export default function PreviewProducts({ product }: PreviewProductsProps) {
             className="flex items-center justify-center text-center w-10 h-9">
             <Link2Icon size={20} color="#3BB77E" />
           </Link>
-          <Link className="flex items-center justify-center text-center w-10 h-9">
+          <span className="flex items-center justify-center text-center w-10 h-9">
             <CustomDialog icon={<EyeIcon size={20} color="#3BB77E" />}>
               <PreviewProductDetails product={product} />
             </CustomDialog>
-          </Link>
+          </span>
         </span>
       </div>
     </>

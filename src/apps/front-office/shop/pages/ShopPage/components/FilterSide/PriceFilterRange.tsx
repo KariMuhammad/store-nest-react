@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { Button } from "src/apps/front-office/design-system/components/ui/button";
-import { shopDataAtom } from "../../atoms/shop-data.atom";
 
 const PriceRangeSlider = () => {
-  const fetch = shopDataAtom.get("fetch");
-
   const [minPrice, setMinPrice] = useState(500);
   const [maxPrice, setMaxPrice] = useState(1000);
 

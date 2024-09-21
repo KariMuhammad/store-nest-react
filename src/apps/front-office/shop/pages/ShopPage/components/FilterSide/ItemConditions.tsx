@@ -5,7 +5,7 @@ export default function ItemConditions() {
     <div className="flex flex-col">
       <h3 className="font-bold my-1">Item Condition</h3>
 
-      {["new", "used", "refurbished"].map((name, index) => (
+      {["new", "sale", "Hot"].map((name, index) => (
         <ItemCondition key={index} id={index} name={name} />
       ))}
     </div>

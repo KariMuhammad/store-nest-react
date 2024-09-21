@@ -8,7 +8,7 @@ export type ProductGridProps = {
 export default function ProductsGrid({ products }: ProductGridProps) {
   return (
     <>
-      <PaginatedItems items={products} />
+      <PaginatedItems products={products} />
     </>
   );
 }

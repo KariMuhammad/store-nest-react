@@ -51,7 +51,7 @@ const categoriesAtom = atom<CategoriesAtomDataType, CategoriesActionsType>({
     getCategories: () => {
       return categoriesAtom.use("originalCategories");
     },
-    filter: searchTerm => {
+    filter: (searchTerm: string) => {
       const filtered = categoriesAtom.value.originalCategories.filter(
         category =>
           category.name.toLowerCase().includes(searchTerm.toLowerCase()),

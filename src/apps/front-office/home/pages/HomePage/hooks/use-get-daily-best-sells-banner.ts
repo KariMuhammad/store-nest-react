@@ -17,7 +17,7 @@ export function useGetDailyBestSellsBanner() {
         console.log(error);
         setError(error.message);
       });
-  }, []);
+  });
 
   return { loading, error, banner };
 }

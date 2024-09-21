@@ -1,68 +1,43 @@
-import ShopBanner from "../components/shopBanner/ShopBanner";
+import { trans } from "@mongez/localization";
+import Helmet from "@mongez/react-helmet";
+import Banner from "src/apps/front-office/design-system/components/Banner";
+import CategorySidebar from "./components/CategorySidebar";
+import FilterSide from "./components/FilterSide";
+import ProductsContainer from "./components/ProductsContainer";
+import ViewDisplayMode from "./components/ProductsContainer/ViewDisplayMode";
+import DealsDays from "./components/sections/DealsDays";
+import ShopBanner from "./components/ShopBanner";
 
 function ShopPage() {
-  // const sidebarRef = useRef<HTMLDivElement>(null);
-  // const sectionRef = useRef<HTMLDivElement>(null);
-  // const [isSticky, setIsSticky] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const sidebar = sidebarRef.current;
-  //     const section = sectionRef.current;
-
-  //     if (sidebar && section) {
-  //       const sidebarTop = sidebar.getBoundingClientRect().top;
-  //       const sectionTop = section.getBoundingClientRect().top;
-
-  //       setIsSticky(sidebarTop < 0 && sectionTop > 0);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-
-  //   const debouncedHandleScroll = debounce(handleScroll, 300);
-  //   window.addEventListener("scroll", debouncedHandleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", debouncedHandleScroll);
-  //   };
-  // }, []);
-
   return (
-    <div className="relative">
+    <>
+      <Helmet title={trans("shop")} />
       <ShopBanner />
-      <div className="container">
-        <div className="md:flex md:flex-row md:justify-between md:gap-12 md:my-12">
-          <div className="basis-full lg:basis-10/12 mt-5 md:mt-0">
-            {/* <ViewDisplayMode /> */}
-            {/* <ProductsContainer /> */}
-
-            {/* Deals Of The Day Component [Task] */}
-            {/* <DealsDays ref={sectionRef} /> */}
-            {/* Stay home Banner [Task Muhammad Darkdir] */}
-          </div>
-          {/* ./Left Side */}
-
-          {/* <div
-            ref={sidebarRef}
-            className={`${isSticky ? "sticky" : "relative"} top-0 h-full basis-full lg:basis-2/12`}>
+      <div className="flex flex-col md:flex-row md:gap-8 my-6 md:my-12">
+        <div className="basis-full lg:basis-4/5 mt-5 md:mt-0">
+          <ViewDisplayMode />
+          <ProductsContainer />
+          <DealsDays />
+        </div>
+        <div className="basis-full lg:basis-[20%] mt-8 lg:mt-0">
+          <div className="sticky top-0">
             <CategorySidebar />
             <FilterSide />
-            <TrendingProducts className="block max-w-56" />
+            {/* <TopSelling moduleName="trending products" /> */}
             <Banner
               imageUrl="https://nest-frontend-v6.netlify.app/assets/imgs/banner/banner-11.png"
-              title="Oraganic"
+              title="Organic"
               Subtitle={() => (
                 <>
-                  Save 17% on <span className="text-primary">Oganic</span> Juice
+                  Save 17% on <span className="text-primary">Organic</span>{" "}
+                  Juice
                 </>
               )}
             />
-          </div> */}
-          {/* ./Right Side */}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

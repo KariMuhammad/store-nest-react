@@ -39,6 +39,9 @@ export default function FeaturedCategories({
             320: {
               slidesPerView: 2, // For screens >= 320px
             },
+            500: {
+              slidesPerView: 3, // For screens >= 320px
+            },
             640: {
               slidesPerView: 4, // For screens >= 640px
             },

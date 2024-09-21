@@ -14,7 +14,9 @@ export default function ViewDisplayMode() {
           <FilterIcon />
         </Button>
       </div>
-      <div className=" text-gray-400">{trans("showing")}</div>
+      <div className=" text-[#7E7E7E] font-normal leading-6">
+        {trans("found")} <span>{trans("products")}</span> {trans("itemsForYou")}
+      </div>
       <div className="flex flex-row gap-3 items-center">
         <button onClick={() => shopDisplayModeAtom.update("grid")}>
           {displayMode === "grid" ? (

@@ -1,0 +1,34 @@
+{
+    "login": {
+        "ar": "تسجيل الدخول",
+        "en": "Login"
+    },
+    "loginButton": {
+        "ar": "تسجيل الدخول",
+        "en": "Log in"
+    },
+    "forgetPassword": {
+        "ar": "هل لا تعرف كلمة المرور؟",
+        "en": "Forgot password?"
+    },
+    "register": {
+        "ar": "ليس لديك حساب؟",
+        "en": "Don't have an account?"
+    },
+    "createHere": {
+        "ar": "إنشاء حساب",
+        "en": "Create here"
+    },
+    "rememberMe": {
+        "ar": "تذكرني",
+        "en": "Remember me"
+    },
+    "username": {
+        "ar": "اسم المستخدم",
+        "en": "Username or Email"
+    },
+    "password": {
+        "ar": "كلمة المرور",
+        "en": "Password"
+    }
+}

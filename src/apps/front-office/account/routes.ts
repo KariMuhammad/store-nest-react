@@ -1,3 +1,4 @@
+import LoginPage from "./pages/Login/LoginPage";
 import { publicRoutes, reverseGuardedRoutes } from "../utils/router";
 import URLS from "../utils/urls";
 import AccountDashboardPage from "./pages/AccountDashboardPage";
@@ -10,6 +11,10 @@ import ResetPassword from "./pages/RestPassword";
 import TrackOrderPage from "./pages/TrackOrderPage";
 reverseGuardedRoutes([
   // login routes
+  {
+    path: URLS.auth.login,
+    component: LoginPage,
+  },
   { path: URLS.auth.register, component: RegisterPage },
   { path: URLS.auth.forgetPassword, component: ForgetPasswordPage },
 ]);

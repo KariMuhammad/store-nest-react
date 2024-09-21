@@ -5,5 +5,5 @@ export type AppProps = {
 };
 
 export default function App({ children }: AppProps) {
-  return <>{children}</>;
+  return <div className="font-custom">{children}</div>;
 }

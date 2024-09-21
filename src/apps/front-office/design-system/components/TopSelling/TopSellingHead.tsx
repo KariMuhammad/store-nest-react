@@ -1,5 +1,6 @@
-import { topSellingType } from "./index";
-export default function TopSellingHead({ productTitle }: topSellingType) {
+import { topSellingCardType } from "./TopSellingCard";
+
+export default function TopSellingHead({ productTitle }: topSellingCardType) {
   return (
     <div className="relative mb-8 border-b border-[#ececec]">
       <h1

@@ -33,9 +33,9 @@
 }
 
 @layer base {
-  * {
+  /* * {
     font-family: "Quicksand", sans-serif;
-  }
+  } */
 
   /* Custom style for slider thumb */
   .slider-thumb-green::-webkit-slider-thumb {

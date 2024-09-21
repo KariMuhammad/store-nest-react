@@ -174,3 +174,11 @@ export type DealsData = {
     type: string;
   }[];
 };
+
+export type PaginationInfo = {
+  limit: number;
+  page: number;
+  total: number;
+  pages: number;
+  results: number;
+};

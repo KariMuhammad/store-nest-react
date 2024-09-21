@@ -1,6 +1,6 @@
 import Banner from "src/apps/front-office/design-system/components/Banner";
-import CategorySidebar from "src/apps/front-office/shop/components/CategorySidebar";
-import TrendingProducts from "src/apps/front-office/shop/pages/components/TrendingProducts";
+
+import CategorySidebar from "src/apps/front-office/shop/pages/ShopPage/components/CategorySidebar";
 import GoverningLaw from "../../components/GoverningLaw";
 import Restrictions from "../../components/Restrictions";
 import SearchInput from "../../components/SearchInput";
@@ -22,7 +22,7 @@ export default function TermsAndConditionsPage() {
         </div>
         <div className="relative flex flex-col gap-10 mb-[30px]">
           <CategorySidebar />
-          <TrendingProducts className="block max-w-56" />
+          {/* <TopSelling moduleName="trending products" /> */}
         </div>
         <div className="hidden lg:block mb-10">
           <Banner
